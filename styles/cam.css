@@ -1,0 +1,30 @@
+.cam{
+    width: 100%;
+    padding: 20px;
+    margin: auto 0;
+    border: 2px solid red;
+    position: relative;
+    height: 500px;
+}
+
+#video{
+    /* width: 500px; */
+    height: 500px;
+    z-index: 1;
+
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+canvas{
+    /* width: 500px; */
+    height: 500px;
+    z-index: 2;
+    border: 2px solid red;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}   

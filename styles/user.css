@@ -1,0 +1,219 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+:root{
+    --bs-body-font-family: 'Roboto', sans;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.panel{
+    width: 100%;
+    min-height: 100vh;
+}
+
+.wrapper{
+    display: flex;
+    position: relative;
+}
+
+.main{
+    width: calc(100% - 260px);
+    min-height: 100vh;
+}
+
+.header{
+    padding: 0 20px;
+    border-bottom: 1px solid rgba(0,0,0,0.1);
+    background-color: #fff;
+    width: 100%;
+    height: 60px;
+
+    display: flex;
+    justify-content: end;
+    align-items: center;
+
+    position: sticky;
+    top: 0;
+    left: 0;
+}
+.header .user{
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+}
+.header .prof{
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    background-color: #525252;
+}
+
+.sidebar{
+    width: 260px;
+    height: 100vh;
+    padding: 20px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    border-right: 1px solid rgba(0,0,0,0.1);
+
+    position: sticky;
+    top: 0;
+    left: 0;
+}
+
+.sidebar ul{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.sidebar ul li{
+    width: 100%;    
+}
+
+.sidebar ul li a{
+    text-decoration: none;
+    color: #525252;
+
+    display: block;
+    padding: 10px;
+
+    border-radius: 10px;
+
+    transition: 150ms ease-in-out;
+}
+
+.sidebar ul li a:hover{
+    background-color: #ccc;
+
+}
+
+.sidebar #logout{
+    position: absolute;
+    z-index: 100;    
+}
+
+
+.page{
+    width: 100%;
+    height: calc(100% - 60px);
+    padding: 20px 100px;
+    background-color: #f2f2f2;
+}
+
+
+
+/* HOME PAGE NI DIRI  */
+.profile_wrapper{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    gap: 20px;
+}
+.profile_wrapper .main-prof{
+    height: 100%;
+    width: 50%;
+    background-color: #FFF;   
+    border: 1px solid rgba(0,0,0,0.1);
+    border-radius: 10px;
+}
+.profile_wrapper .sub-sched{
+    height: 100%;
+    width: 50%;
+
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.profile_wrapper .sub-sched .subs{
+    width: 100%;
+    height: 50%;
+    background-color: #FFF;   
+    border: 1px solid rgba(0,0,0,0.1);
+    border-radius: 10px;
+}
+
+.profile_wrapper .sub-sched .scheds{
+    width: 100%;
+    height: 50%;
+    background-color: #FFF;   
+    border: 1px solid rgba(0,0,0,0.1);
+    border-radius: 10px;
+}
+
+
+/* ATTENDANCE NI DIRI  */
+.att_wrapper{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.att_wrapper  .rooms{
+    width: 100%;
+    /* height: 60%; */
+    
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+.att_wrapper  .rooms .room{
+    padding: 20px 40px;
+    flex: 0 1 calc(100% / 3 - 20px); /* para dynamic ang rooms */
+
+    background-color: #FAA0A0;
+    border-radius: 10px;
+    border: 2px solid 	#E35335; 
+
+    color: #E35335;
+}
+.att_wrapper  .rooms .room p{
+    display: block;
+    background-color: #E35335;
+    padding: 10px;
+    border-radius: 5px;
+    color: #fff;
+}
+.att_wrapper  .rooms .room.active{
+    background-color: #AFE1AF;
+    border: 2px solid #50C878; 
+    color: #50C878;
+}
+.att_wrapper  .rooms .room.active p{
+    display: block;
+    background-color: #50C878;
+    padding: 10px;
+    border-radius: 5px;
+    color: #fff;
+}
+.att_wrapper  .rooms .room i{
+    font-size: 40px;
+}
+.att_wrapper .cam-scan{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.att_wrapper .cam-scan{
+    text-align: center;
+}
+
+
+
+/* SCHEDULE NI DIRI  */
+.table{
+    border-radius: 10px;
+}
