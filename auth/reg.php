@@ -9,7 +9,7 @@ if (isset($_POST['btn_reg'])) {
 
     $picture = $_FILES['picture']["name"];
     $tempname = $_FILES["picture"]["tmp_name"];
-    $folder = "./../assets/" . $tempname;
+    $folder = "./../assets/" . $picture;
 
 
     if (move_uploaded_file($tempname, $folder)) {
@@ -79,7 +79,8 @@ $conn->close();
                     <div class="mb-3">
                         <input class="form-control shadow-none" name="picture" type="file" id="formFile" required>
                     </div>
-                    <button class="btn btn-dark d-flex align-items-center justify-content-center px-3 py-2 mb-5 w-100" name="btn_reg">Proceed </button>
+                    <button class="d-flex align-items-center justify-content-center w-100" name="btn_reg" id="btn">Proceed </button>
+                    <a href="./../index.php" class="btn btn-primary w-100 mt-2 mb-5" id="btn_reg">Login</a>
                 </form>
 
                 <p class="form-text position-absolute bottom-0 start-50 translate-middle">Developed by <i class="text-danger">Jeshua Lopez</i></p>

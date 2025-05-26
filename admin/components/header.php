@@ -1,6 +1,7 @@
 <div class="header">
     <div class="user">
-        <h2 class="m-0">Admin</h2>
-        <div class="prof"></div>
+        <button><i class="bi bi-bell-fill"></i></button>
+        <div class="prof"><i class="bi bi-person-fill"></i></div>
+        <p class="m-0">Chunkz Dev</p>
     </div>
 </div>

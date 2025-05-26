@@ -26,7 +26,7 @@
 }
 
 .header{
-    padding: 0 20px;
+    padding: 0 100px;
     border-bottom: 1px solid rgba(0,0,0,0.1);
     background-color: #3d5a80;
     width: 100%;
@@ -49,11 +49,29 @@
     align-items: center;
     gap: 15px;
 }
-.header .prof{
-    width: 45px;
-    height: 45px;
-    border-radius: 50%;
+
+.header .user button{
+    width: 30px;
+    height: 30px;
+    display: grid;
+    place-items: center;
+    border: none;
     background-color: #fff;
+    color: #3d5a80;
+    border-radius: 10px;
+    font-weight: bolder;
+    font-size: 20px;
+}
+.header .prof{
+    width: 30px;
+    height: 30px;
+    border-radius: 10px;
+    background-color: #fff;
+    color: #3d5a80;
+
+    display: grid;
+    place-items: center;
+    font-size: 22px;
 }
 
 .sidebar{
@@ -140,7 +158,7 @@
 }
 .dashboard .boxes .box{
     padding: 20px 50px;
-    flex: 1 1 calc(100% / 3 - 20px); /* para dynamic ang rooms */
+    flex: 1 1 calc(100% / 3 - 20px);
     background-color: #fff;
     border-radius: 10px;
     border: 1px solid 	rgba(0,0,0,0.1); 
@@ -155,13 +173,13 @@
     border-radius: 50%;
 }
 .dashboard .boxes .box:nth-child(1) i{
-    background-color: #98c1d9;
+    background-color: #ee6c4d;
 }
 .dashboard .boxes .box:nth-child(2) i{
     background-color: #ee6c4d;
 }
 .dashboard .boxes .box:nth-child(3) i{
-    background-color: #76c893;
+    background-color: #ee6c4d;
 }
 .dashboard .graph{
     width: 100%;
@@ -170,6 +188,16 @@
 
     height: 80%;
 }
+
+.dashboard .graph .visual{
+    display: flex;
+    flex-direction: column;
+}
+
+.dashboard .graph .visual .g{
+    flex: 1;
+}
+
 .dashboard .graph .visual:nth-child(1){
     padding: 20px;
     height: 100%;
@@ -186,9 +214,27 @@
     border-radius: 10px;
     border: 1px solid 	rgba(0,0,0,0.1); 
 }
+#btn_nt{
+    background-color: #153b47;
+    color: #fff;
+}
 
 
 /* SCHEDULE AND SCHEDULE NI DIRI  */
+.as_wrapper{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.ast{
+    width: 100%;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    border: 1px solid 	rgba(0,0,0,0.1); 
+}
 .as{
     width: 100%;
     height: 100%;
@@ -203,7 +249,7 @@
 
 
 
-/* ATTENDANCE NI DIRI  */
+/* TEACHERS PROFILE NI DIRI  */
 .att_wrapper{
     width: 100%;
     height: 100%;
@@ -211,42 +257,23 @@
     flex-direction: column;
     gap: 20px;
 }
-.att_wrapper  .rooms{
+.att_wrapper .rooms{
     width: 100%;
-    /* height: 60%; */
-    
-    display: flex;
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
     gap: 20px;
 }
 .att_wrapper  .rooms .room{
-    padding: 20px 40px;
-    flex: 0 1 calc(100% / 3 - 20px); /* para dynamic ang rooms */
-
-    background-color: #FAA0A0;
+    padding: 20px;
+    background-color: #fff;
     border-radius: 10px;
-    border: 2px solid 	#E35335; 
+    border: 1px solid 	rgba(0,0,0,0.1); 
 
-    color: #E35335;
-}
-.att_wrapper  .rooms .room p{
-    display: block;
-    background-color: #E35335;
-    padding: 10px;
-    border-radius: 5px;
-    color: #fff;
-}
-.att_wrapper  .rooms .room.active{
-    background-color: #AFE1AF;
-    border: 2px solid #50C878; 
-    color: #50C878;
-}
-.att_wrapper  .rooms .room.active p{
-    display: block;
-    background-color: #50C878;
-    padding: 10px;
-    border-radius: 5px;
-    color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
 }
 .att_wrapper  .rooms .room i{
     font-size: 40px;
@@ -260,6 +287,183 @@
 .att_wrapper .cam-scan{
     text-align: center;
 }
+.tch{
+    width: 100%;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    border: 1px solid 	rgba(0,0,0,0.1); 
+}
+
+#btn_tch{
+    border: none;
+    background-color: #ee6c4d;    
+    border-radius: 5px;
+    color: #fff;
+    padding: 10px 20px;
+}
+
+.tch_pic{
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+.tch_pic img{
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+}
+
+.tch_info #btn_vp{
+    border: none;
+    background-color: #263f60;    
+    border-radius: 5px;
+    color: #fff;
+    padding: 10px 20px;
+}
+
+.btn_vp{
+    border: none;
+    background-color: #153b47;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 5px;
+}
 
 
 
+
+/* SUBJECTS PAGE DIRI  */
+.subs_wrapper{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.subs_wrapper .subs{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+.subs_wrapper  .subs .sub{
+    padding: 20px;
+    flex: 0 1 calc(25% - 20px);
+    background-color: #fff;
+    border-radius: 10px;
+    border: 1px solid 	rgba(0,0,0,0.1); 
+
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    
+}
+.subs_wrapper  .subs .sub i{
+    font-size: 40px;
+}
+.subs_wrapper .cam-scan{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.subs_wrapper .cam-scan{
+    text-align: center;
+}
+.tch{
+    width: 100%;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    border: 1px solid 	rgba(0,0,0,0.1); 
+}
+
+#btn_tch{
+    border: none;
+    background-color: #ee6c4d;    
+    border-radius: 5px;
+    color: #fff;
+    padding: 10px 20px;
+}
+
+.tch_pic{
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+.tch_pic img{
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+}
+
+.tch_info #btn_vp{
+    border: none;
+    background-color: #263f60;    
+    border-radius: 5px;
+    color: #fff;
+    padding: 10px 20px;
+}
+
+
+
+
+/* PROFILE NI SA MAESTRO   */
+.prof_wrapper{
+    width: 100%;
+    height: 100%;
+    
+
+    display: grid;
+    grid-template-columns: 2fr 3fr;
+    gap: 20px
+}
+.prof_right{
+
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.prof_right .prof_sub{
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    border: 1px solid 	rgba(0,0,0,0.1); 
+}
+.prof_right .prof_add{
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    border: 1px solid 	rgba(0,0,0,0.1);    
+}
+.prof_left{
+    padding: 30px;
+    background-color: #fff;
+    border-radius: 10px;
+    border: 1px solid 	rgba(0,0,0,0.1); 
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.prof_pic{
+    width: 250px;
+    height: 250px;
+    overflow: hidden;
+    border-radius: 50%;
+
+    border: 1px solid 	rgba(0,0,0,0.1); 
+}
+.prof_pic img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
